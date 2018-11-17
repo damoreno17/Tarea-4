@@ -30,13 +30,13 @@ int main(){
 			v_i_x=0;
 		}
 		v_i_y=v_y_medio+(delta_t)*a_y(v_i_x, v_i_y);//velocidad en y en t-deltat/2
-		//ahora calculamos las posiciones en t:
+		//  posiciones en t:
 		x=x+v_i_x*delta_t;
 		y=y+v_i_y*delta_t;
-		//actualizamos los valores de las melocidades en t-deltat/2:
+		//actualizamos los valores de las velocidades en t-deltat/2:
 		v_x_medio=v_i_x;
 		v_y_medio=v_i_y;
-		//finalmente calculamos las velocidades en delta t:
+		//calculamos las velocidades en delta t:
 		float v_x_exp=v_x_medio+a_x(v_x_medio, v_y_medio)*(delta_t/2);
 		float v_y_exp=v_y_medio+a_y(v_x_medio, v_y_medio)*(delta_t/2);
 		i+=1;
@@ -61,7 +61,7 @@ int main(){
 		float v_i_y=v_i*sin(tetha);
 		float v_x_medio=v_i_x-(delta_t/2)*a_x(v_i_x, v_i_y);
 		float v_y_medio=v_i_y-(delta_t/2)*a_y(v_i_x, v_i_y);
-		// hacemos un bluque while para calcular las posiciones:
+		// while para calcular posiciones:
 		
 		while (y>=0){
 			v_i_x=v_x_medio+(delta_t)*a_x(v_i_x, v_i_y);//velocidad en x en t-deltat/2:
@@ -69,10 +69,10 @@ int main(){
 				v_i_x=0;
 			}
 			v_i_y=v_y_medio+(delta_t)*a_y(v_i_x, v_i_y);//velocidad en y en t-deltat/2
-			//ahora calculamos las posiciones en t:
+			// las posiciones en t:
 			x=x+v_i_x*delta_t;
 			y=y+v_i_y*delta_t;
-			//actualizamos los valores de las melocidades en t-deltat/2:
+			// valores de las velocidades en t-deltat/2:
 			v_x_medio=v_i_x;
 			v_y_medio=v_i_y;
 			//finalmente calculamos las velocidades en delta t:
@@ -95,7 +95,7 @@ int main(){
 		
 	float tetha_max_grados=180*tetha_max/3.141592654;
 	
-	cout<<"la distancia maxima es "<<x_max<<" a un angulo de "<<tetha_max_grados<<" grados";
+	cout<<"La distancia maxima es "<<x_max<<" a un angulo de "<<tetha_max_grados<<" grados";
 	
 	
 	
