@@ -3,20 +3,20 @@
 #include<fstream>
 using namespace std;
 int main(){
-	//los datos del problema:
+	//datos:
 	float k=1.62;
 	float cp=820;
 	float pro=(2.71/1000)*pow(100,3);
-	//creamos arrays para guardar la información de los nodos
+	//arrays para guardar la informaciÃ³n de los nodos
 	float i_nodos[34];//indice de los nodos
 	float x_nodos[34];//coordenada x
 	float y_nodos[34];//coordenada y
 	float T_nodos[34];//Temperatura de los nodos.
-	float avarage_delta_x=0.05;//espaciamiento promedio delta x en m, 5 cm.
+	float avarage_delta_x=0.05;//espaciamiento 5 cm.
 	float T_varilla=100;
 	float dt=0.00000000001;
 	float v=k*(cp*pro);
-	//llenar los aanteriores con la informacion:
+	//llenar los anteriores con la informacion:
 	for (int i=0;i<34;i++){
 		i_nodos[i+1]=i+1;
 	}//ahora llenamos las corrdenadas x y y hasta el nodo 22. Este proceso se conoce como enmallado
@@ -43,7 +43,7 @@ int main(){
  	for (int i=0;i<34;i++){
  		malla<<i_nodos[i+1]<<","<<x_nodos[i+1]<<","<<y_nodos[i+1]<<"\n";
 	 }
-	//caso 1: fronteras a 10°
+	//caso 1: fronteras a 10Â°
 	//se imponen las temperaturas iniciales:
 	for (int i=0;i<34;i++){
 		T_nodos[i+1]=T_varilla;//todos los nodos con T de la varilla.
