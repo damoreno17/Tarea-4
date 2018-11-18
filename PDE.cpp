@@ -44,7 +44,19 @@ int main(){
  		malla<<i_nodos[i+1]<<","<<x_nodos[i+1]<<","<<y_nodos[i+1]<<"\n";
 	 }
 	//caso 1: fronteras a 10°
-	
+	//se imponen las temperaturas iniciales:
+	for (int i=0;i<34;i++){
+		T_nodos[i+1]=T_varilla;//todos los nodos con T de la varilla.
+	}
+	for (int i=0;i<6;i++){//fronteras
+		T_nodos[i+1]=10;
+	}
+	T_nodos[26]=10;
+	T_nodos[31]=10;
+	ofstream T_t_0("T.txt");
+	for (int i=0;i<34;i++){
+		T_t_0<<i_nodos[i+1]<<","<<T_nodos[i+1]<<"\n";
+	}
 	//resolver para nodos internos:
 	float T_t_next[34];//creamos un vector para cuadar en t +deltt,
 	//resolvemos primero las T de las fronteras simetricas:
