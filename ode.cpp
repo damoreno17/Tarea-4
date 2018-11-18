@@ -50,7 +50,10 @@ int main(){
 	float x_max=x;
 	float tetha_max=tetha;
 	
-	//segunda parte: para diferentes angulos:
+	//segunda parte: 
+	
+	//para diferentes angulos:
+	
 	ofstream proyectil1("segunda_parte.txt");
 	for (int i=0;i<7;i++){
 		float tetha=((10)+10*i)*M_PI/180;
@@ -72,10 +75,10 @@ int main(){
 			// las posiciones en t:
 			x=x+v_i_x*delta_t;
 			y=y+v_i_y*delta_t;
-			// valores de las velocidades en t-deltat/2:
+			// velocidades en t-deltat/2:
 			v_x_medio=v_i_x;
 			v_y_medio=v_i_y;
-			//finalmente calculamos las velocidades en delta t:
+			//las velocidades en delta t:
 			float v_x_exp=v_x_medio+a_x(v_x_medio, v_y_medio)*(delta_t/2);
 			float v_y_exp=v_y_medio+a_y(v_x_medio, v_y_medio)*(delta_t/2);
 			j+=1;
