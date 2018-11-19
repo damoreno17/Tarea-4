@@ -19,7 +19,7 @@ int main(){
 	//llenar los anteriores con la informacion:
 	for (int i=0;i<34;i++){
 		i_nodos[i+1]=i+1;
-	}//ahora llenamos las corrdenadas x y y hasta el nodo 22. Este proceso se conoce como enmallado
+	}//ahora llenamos las corrdenadas x y y hasta el nodo 22"enmallado"
 	for (int i=0;i<4;i++){
 		for (int j=0;j<6;j++){
 			x_nodos[j+1+i*6]=j*avarage_delta_x;
