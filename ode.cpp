@@ -22,7 +22,7 @@ int main(){
 	float v_i_y=v_i*sin(tetha);
 	float v_x_medio=v_i_x-(delta_t/2)*a_x(v_i_x, v_i_y);
 	float v_y_medio=v_i_y-(delta_t/2)*a_y(v_i_x, v_i_y);
-	// hacemos while para calcular las posiciones:
+	//while para calcular las posiciones:
 	ofstream proyectil("proyectil.txt");
 	while (y>=0){
 		v_i_x=v_x_medio+(delta_t)*a_x(v_i_x, v_i_y);//velocidad en x en t-deltat/2:
