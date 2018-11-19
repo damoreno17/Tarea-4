@@ -1,5 +1,6 @@
 all: *.pdf
 
+
 *.txt: ODE.cpp PDE.cpp
 	g++ ODE.cpp -o proyectil
 	g++ PDE.cpp -o calcita
