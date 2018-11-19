@@ -1,54 +1,53 @@
 
-# coding: utf-8
+ coding: utf-8
 
-# In[1]:
 
-##importamos las librerias necesarias
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+from matplotlib import cm
 
 
-# In[2]:
+
 
 ###leemos los datos de las diferentes trayectorias:
-#trayectoria_10=np.loadtxt('10.txt',float,delimiter=',');
-#trayectoria_20=np.loadtxt('20.txt',float,delimiter=',');
-#trayectoria_30=np.loadtxt('30.txt',float,delimiter=',');
-#trayectoria_40=np.loadtxt('40.txt',float,delimiter=',');
-#trayectoria_50=np.loadtxt('50.txt',float,delimiter=',');
-#trayectoria_60=np.loadtxt('60.txt',float,delimiter=',');
-#trayectoria_70=np.loadtxt('70.txt',float,delimiter=',');
-#trayectoria_45=np.loadtxt('proyectil.txt',float,delimiter=',');
-#
-#
-## In[10]:
-#
+trayectoria_10=np.loadtxt('10.txt',float,delimiter=',');
+trayectoria_20=np.loadtxt('20.txt',float,delimiter=',');
+trayectoria_30=np.loadtxt('30.txt',float,delimiter=',');
+trayectoria_40=np.loadtxt('40.txt',float,delimiter=',');
+trayectoria_50=np.loadtxt('50.txt',float,delimiter=',');
+trayectoria_60=np.loadtxt('60.txt',float,delimiter=',');
+trayectoria_70=np.loadtxt('70.txt',float,delimiter=',');
+trayectoria_45=np.loadtxt('proyectil.txt',float,delimiter=',');
+
+
+
+
 ###graficamos las trayectorias del proyectil para los diferentes angulos:
-#plt.plot(trayectoria_10[:,1],trayectoria_10[:,2]);
-#plt.hold(True);
-#plt.plot(trayectoria_20[:,1],trayectoria_20[:,2]);
-#plt.hold(True);
-#plt.plot(trayectoria_30[:,1],trayectoria_30[:,2]);
-#plt.hold(True);
-#plt.plot(trayectoria_40[:,1],trayectoria_40[:,2]);
-#plt.hold(True);
-#plt.plot(trayectoria_50[:,1],trayectoria_50[:,2]);
-#plt.hold(True);
-#plt.plot(trayectoria_60[:,1],trayectoria_60[:,2]);
-#plt.hold(True);
-#plt.plot(trayectoria_70[:,1],trayectoria_70[:,2]);
-#plt.hold(True);
-#plt.plot(trayectoria_45[:,1],trayectoria_45[:,2]);
-#plt.hold(False);
-#plt.xlabel('posición x')
-#plt.ylabel('posición y')
-#plt.legend(('10°','20°','30°','40°','50°','60°','70°','45°'),loc='upper right')
-#plt.savefig('trayectorias.pdf',dpi=300)
-#plt.close()
+plt.plot(trayectoria_10[:,1],trayectoria_10[:,2]);
+plt.hold(True);
+plt.plot(trayectoria_20[:,1],trayectoria_20[:,2]);
+plt.hold(True);
+plt.plot(trayectoria_30[:,1],trayectoria_30[:,2]);
+plt.hold(True);
+plt.plot(trayectoria_40[:,1],trayectoria_40[:,2]);
+plt.hold(True);
+plt.plot(trayectoria_50[:,1],trayectoria_50[:,2]);
+plt.hold(True);
+plt.plot(trayectoria_60[:,1],trayectoria_60[:,2]);
+plt.hold(True);
+plt.plot(trayectoria_70[:,1],trayectoria_70[:,2]);
+plt.hold(True);
+plt.plot(trayectoria_45[:,1],trayectoria_45[:,2]);
+plt.hold(False);
+plt.xlabel('posición x')
+plt.ylabel('posición y')
+plt.legend(('10°','20°','30°','40°','50°','60°','70°','45°'),loc='upper right')
+plt.savefig('trayectorias.pdf',dpi=300)
+plt.close()
 
 
-# In[4]:
+
 
 ##ahora pasamos a graficar el problema de las diferencias finitas:
 malla=np.loadtxt('malla.txt',float, delimiter=',');
@@ -58,14 +57,12 @@ caso3=np.loadtxt('tercer_caso.txt',float,delimiter=',',usecols=range(36));
 x=np.transpose(malla[:,1])
 y=np.transpose(malla[:,2])
 
-# In[48]:
-from mpl_toolkits.mplot3d import Axes3D
-from matplotlib import cm
+
+
 
 ##graficas del caso 1:
 
-# ********************************************************************
-# ********************************************************************
+
 T=caso1[0,:]
 fig = plt.figure()
 ax = fig.gca(projection='3d')
@@ -103,9 +100,8 @@ plt.ylabel('Temperatura promedio')
 plt.savefig('temperatura_promedio_primer_caso.pdf')
 
 
-# ********************************************************************
-# ********************************************************************
-#ahora el segundo caso:
+
+# el segundo caso:
 #condicion inicial
 T=caso2[0,:]
 fig = plt.figure()
@@ -141,9 +137,6 @@ plt.xlabel('tiempo')
 plt.ylabel('Temperatura promedio')
 plt.savefig('temperatura_promedio_segundo_caso.pdf')
 
-
-# ********************************************************************
-# ********************************************************************
 #tercer caso:
 #condicion inicial
 T=caso3[0,:]
