@@ -16,7 +16,7 @@ int main(){
 	float T_varilla=100;
 	float dt=0.00000000001;
 	float v=k*(cp*pro);
-	//llenar los anteriores con la informacion:
+	//llenar los anteriores con  la informacion:
 	for (int i=0;i<34;i++){
 		i_nodos[i+1]=i+1;
 	}//ahora llenamos las corrdenadas x y y hasta el nodo 22"enmallado"
