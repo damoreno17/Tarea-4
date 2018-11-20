@@ -29,7 +29,7 @@ int main(){
 		if(v_i_x<0){
 			v_i_x=0;
 		}
-		v_i_y=v_y_medio+(delta_t)*a_y(v_i_x, v_i_y);//velocidad en y en t-deltat/2
+		v_i_y=v_y_medio+(delta_t)in*a_y(v_i_x, v_i_y);//velocidad en y en t-deltat/2
 		//  posiciones en t:
 		x=x+v_i_x*delta_t;
 		y=y+v_i_y*delta_t;
