@@ -10,7 +10,7 @@ from matplotlib import cm
 
 
 
-###leemos los datos de las diferentes trayectorias:
+### datos de las diferentes trayectorias:
 trayectoria_10=np.loadtxt('10.txt',float,delimiter=',');
 trayectoria_20=np.loadtxt('20.txt',float,delimiter=',');
 trayectoria_30=np.loadtxt('30.txt',float,delimiter=',');
@@ -49,7 +49,7 @@ plt.close()
 
 
 
-##ahora pasamos a graficar el problema de las diferencias finitas:
+## graficar problema de las diferencias finitas:
 malla=np.loadtxt('malla.txt',float, delimiter=',');
 caso1=np.loadtxt('solucion_primer_caso.txt',float,delimiter=',',usecols=range(36));
 caso2=np.loadtxt('segundo_caso.txt',float,delimiter=',',usecols=range(36));
@@ -172,5 +172,3 @@ plt.xlabel('tiempo')
 plt.ylabel('Temperatura promedio')
 plt.savefig('temperatura_promedio_tercer_caso.pdf')
 
-
-# 
